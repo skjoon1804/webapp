@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+      <facet type="webservices" name="WebServices">
+        <configuration ws.engine="Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+      </facet>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Arquillian JUnit:Release" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../jarfiles/mysql-connector-java-5.0.8-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/recaptcha4j-0.0.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/servlet-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.aop-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.aspects-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.beans-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.context-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.context.support-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.core-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.expression-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.instrument-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.instrument.tomcat-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.jdbc-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.jms-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.orm-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.oxm-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.test-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.transaction-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.web-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.web.portlet-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.web.servlet-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.web.struts-sources-3.0.1.RELEASE-A.jar!/" />
+          <root url="jar://$MODULE_DIR$/../jarfiles/org.springframework.web.struts-sources-3.0.1.RELEASE-A.jar!/org/springframework/web/struts" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../jarfiles" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/../jarfiles" recursive="false" />
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: linen;
+}
+
+td {
+    border-top-style: solid;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <tr style="font-weight:bold; background-color: orange">
+    <td width="300px">Single-instance version cases</td>
+    <td>Graph Results Screenshot</td>
+    <td>Average JDBC Time(ms)</td>
+    <td>Average Search Servlet Time(ms)</td>
+    <td>Average Query Time(ms)</td>
+    <td>Analysis</td>
+  </tr>
+  <tr>
+    <td>Case 1: HTTP/1 thread</td>
+    <td><img src="../img/1_1.png" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>0.11996828</td>
+    <td>4.651330</td>
+    <td>48</td>
+    <td>Network connection overhead was large so that the response time was slow.</td>
+  </tr>
+  <tr>
+    <td>Case 2: HTTP/10 threads</td>
+    <td><img src="../img/1_2.png" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>0.29184</td>
+    <td>2.246159</td>
+    <td>48</td>
+    <td>Since the connection pooling gave us open connection to the database the result was queried faster than just having one thread</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTPS/10 threads</td>
+    <td><img src="../img/1_3.png" alt="Graph Results Screenshot Case 3" style="width:304px;height:228px;"></td>
+    <td>0.23859</td>
+    <td>5.51636</td>
+    <td>52</td>
+    <td>HTTPS has to authenticate one more time so the response time was slower than the other HTTP Coonection. but the actual query time doesn't show much difference</td>
+  </tr>
+  <tr>
+    <td>Case 4: HTTP/10 threads/No prepared statements</td>
+    <td><img src="../img/1_4.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>0.24642</td>
+    <td>4.50330</td>
+    <td>49</td>
+    <td>without the Prepared statement the query serach time went up about 2 times compared to the other result. Significant difference will occur with more test size</td>
+  </tr>
+  <tr>
+    <td>Case 5: HTTP/10 threads/No connection pooling</td>
+    <td><img src="../img/1_5.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>54.08878</td>
+    <td>5.09989</td>
+    <td>70</td>
+    <td>with out connection pooling, the resposnse time infliated about 20 time the original results. Connection pooling does make significant difference on connection speed.</td>
+  </tr>
+
+</table> 
+
+
+<table style="width:100%">
+  <tr style="font-weight:bold; background-color: orange">
+    <td width="300px">Scaled version cases</td>
+    <td>Graph Results Screenshot</td>
+    <td>Average JDBC Time(ms)</td>
+    <td>Average Search Servlet Time(ms)</td>
+    <td>Average Query Time(ms)</td>
+    <td>Analysis</td>
+  </tr>
+  <tr>
+    <td>Case 1: HTTP/1 thread</td>
+    <td><img src="../img/2_1.png" alt="Graph Results Screenshot Case 1" style="width:304px;height:228px;"></td>
+    <td>0.10569234</td>
+    <td>5.6341330</td>
+    <td>64</td>
+    <td>My Internet connection got somewhat slow so the range went up but the response time of sql execution and connection didnt change much</td>
+  </tr>
+  <tr>
+    <td>Case 2: HTTP/10 threads</td>
+    <td><img src="../img/2_2.png" alt="Graph Results Screenshot Case 2" style="width:304px;height:228px;"></td>
+    <td>0.4257235</td>
+    <td>2.85299</td>
+    <td>56</td>
+    <td>Connections were headed to different places so the aversgage seach servelt time was reduced because of the load hold on one server</td>
+  </tr>
+  <tr>
+    <td>Case 3: HTTP/10 threads/No prepared statements</td>
+    <td><img src="../img/2_3.png" alt="Graph Results Screenshot Case 3" style="width:304px;height:228px;"></td>
+    <td>0.23859</td>
+    <td>5.342153</td>
+    <td>53</td>
+    <td>without the Prepared statement the query serach time went up about 2 times compared to the other result. Significant difference will occur with more test size</td>
+  </tr>
+  <tr>
+    <td>Case 4: HTTP/10 threads/No connection pooling</td>
+    <td><img src="../img/2_4.png" alt="Graph Results Screenshot Case 4" style="width:304px;height:228px;"></td>
+    <td>43.08878</td>
+    <td>5.340023</td>
+    <td>40</td>
+    <td>Same as HTTP without connection pooling, with out connection pooling, the resposnse time infliated about 20 time the original results. Connection pooling does make significant difference on connection speed.</td>
+  </tr>
+
+</table> 
+
+</body>
+</html>

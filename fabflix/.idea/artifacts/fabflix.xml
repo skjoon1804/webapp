@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="fabflix">
+    <output-path>$PROJECT_DIR$/out/fabflix</output-path>
+    <root id="archive" name="fabflix.war">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/context.xml" />
+      </element>
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../jarfiles/mysql-connector-java-5.0.8-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jarfiles/recaptcha4j-0.0.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jarfiles/servlet-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jarfiles/gson-2.6.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../jarfiles/retrofit-2.0.2.jar" />
+          <element id="library" level="project" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="fabflix" />
+        </element>
+        <element id="directory" name="sources">
+          <element id="dir-copy" path="$PROJECT_DIR$/src" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="fabflix/web/Web" />
+      <element id="file-copy" path="$PROJECT_DIR$/web/avg.py" />
+      <element id="file-copy" path="$PROJECT_DIR$/web/test.txt" />
+    </root>
+  </artifact>
+</component>
